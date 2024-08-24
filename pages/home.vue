@@ -1133,9 +1133,9 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                                     <h4>{{ portfoliocontent.name }}</h4>
                                 </div>
                                 <div class="w-[100%] h-[20%] p-[10px] space-x-1 flex items-center ">
-                                    <img class="w-[20px] h-[20px]" :src="`/_nuxt/public/${portfoliocontent.skill1}`">
-                                    <img class="w-[20px] h-[20px]" :src="`/_nuxt/public/${portfoliocontent.skill2}`">
-                                    <img class="w-[20px] h-[20px]" :src="`/_nuxt/public/${portfoliocontent.skill3}`">
+                                    <img class="w-[20px] h-[20px]" :src="portfoliocontent.skill1">
+                                    <img class="w-[20px] h-[20px]" :src="portfoliocontent.skill2">
+                                    <img class="w-[20px] h-[20px]" :src="portfoliocontent.skill3">
                                 </div>
                             </NuxtLink>
                         </div>
@@ -1178,7 +1178,7 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                                         <div class=" w-[100%] h-[70%]">
                                             <div class="relative w-[100%] h-[100%]">
                                                 <div class="absolute w-[100%] h-[100%]">
-                                                    <img class="w-[100%] h-[100%] object-cover rounded-top-[10px]" :src="`/_nuxt/public/${portfoliocontent.backgroundImg}`">
+                                                    <img class="w-[100%] h-[100%] object-cover rounded-top-[10px]" :src="portfoliocontent.backgroundImg">
                                                 </div>
                                                 <div class="absolute w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] rounded-t-[10px]"></div>
                                                 <div class="absolute  w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] rounded-t-[10px] flex items-center justify-center opacity-0 hover:opacity-100">
@@ -1191,9 +1191,9 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                                                 <h4 class="text-[20px]">{{ portfoliocontent.name }}</h4>
                                             </div>
                                             <div class="w-[100%] h-[50%] flex items-center space-x-4 ">
-                                                <img class="w-[30px] h-[30px]" :src="`/_nuxt/public/${portfoliocontent.skill1}`">
-                                                <img class="w-[30px] h-[30px]" :src="`/_nuxt/public/${portfoliocontent.skill2}`">
-                                                <img class="w-[30px] h-[30px]" :src="`/_nuxt/public/${portfoliocontent.skill3}`">
+                                                <img class="w-[30px] h-[30px]" :src="portfoliocontent.skill1">
+                                                <img class="w-[30px] h-[30px]" :src="portfoliocontent.skill2">
+                                                <img class="w-[30px] h-[30px]" :src="portfoliocontent.skill3">
                                             </div>
                                         </div>
                                     </div>
