@@ -1122,7 +1122,7 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                             <NuxtLink :to="portfoliocontent.link" target="_blank">
                                 <div class="relative w-[100%] h-[60%]">
                                     <div class="absolute w-[100%] h-[100%]">
-                                        <img class="w-[100%] h-[100%] object-cover rounded-[10px]" :src="`/_nuxt/public/${portfoliocontent.backgroundImg}`">
+                                        <img class="w-[100%] h-[100%] object-cover rounded-[10px]" :src="portfoliocontent.backgroundImg">
                                     </div>
                                     <div class="absolute w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] rounded-t-[10px]"></div>
                                     <div class="absolute  w-[100%] h-[100%] bg-[rgba(0,0,0,0.4)] rounded-t-[10px] flex items-center justify-center opacity-0 hover:opacity-100">
