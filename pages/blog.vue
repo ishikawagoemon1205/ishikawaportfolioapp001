@@ -22,7 +22,7 @@
     const allClearSkillButtonColor = () => {
 
         for(let key in skillButtonColor.value){
-            skillButtonColor.value[key] = "#ffffff"
+            // skillButtonColor.value[key] = "#ffffff"
         }
 
     }
@@ -70,8 +70,8 @@
                          <BlogcontentsFlutter></BlogcontentsFlutter>
                     </div>
                 </div>
-                <div class="w-[250px] h-[100%]">
-                    <div class="fixed w-[200px] h-[500px] p-[10px] space-y-[10px]">
+                <div class="w-[250px] h-[calc(100vh-140px)]">
+                    <div class="w-[250px] h-[80%] fixed w-[200px] h-[500px] p-[10px] space-y-[10px]">
                         <ButtonsHtml @click="clickButton('html')" :style="{background: skillButtonColor.html}"></ButtonsHtml>
                         <ButtonsCss @click="clickButton('css')" :style="{background: skillButtonColor.css}"></ButtonsCss>
                         <ButtonsJavascript @click="clickButton('javascript')" :style="{background: skillButtonColor.javascript}"></ButtonsJavascript>
@@ -80,6 +80,14 @@
                         <ButtonsNuxtjs  @click="clickButton('nuxt')" :style="{background: skillButtonColor.nuxt}"></ButtonsNuxtjs>
                         <ButtonsPython  @click="clickButton('python')" :style="{background: skillButtonColor.pythone}"></ButtonsPython>
                         <ButtonsAws  @click="clickButton('aws')" :style="{background: skillButtonColor.aws}"></ButtonsAws>
+                    </div>
+                    <div class="w-[250px] h-[10%] mt-[calc(55vh)] fixed">
+                        <button class=" w-[200px] h-[60px] rounded-[5px] bg-blue hover:bg-Lblue transition duration-300">
+                            <div class="flex items-center justify-center space-x-[8px]">
+                                <PlusOutlined :style="{color: '#ffffff'}" />
+                                <h4 class="text-[#ffffff]">Add</h4>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>

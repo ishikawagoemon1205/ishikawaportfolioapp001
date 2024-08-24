@@ -133,7 +133,7 @@
                 <div v-for="headerIcon in headerIconsProperties" class="w-[60px] h-[60px] p-[4px]">
                     <div class="w-[100%] h-[100%] rounded-[6px] drop-shadow hover:border-solid hover:border hover:border-Lblue" :style="{background: `${headerIcon.bgcolor}`}">
                         <div class="w-[100%] h-[70%] flex items-center justify-center">
-                            <img class="w-[30px] h-[30px]" :src="`/_nuxt/public/${headerIcon.imgpass}`">
+                            <img class="w-[30px] h-[30px]" :src="headerIcon.imgpass">
                         </div>
                         <div class="w-[100%] h-[30%] flex items-center">
                             <p class="w-[100%] h-[100%] fontZenDoc text-center text-[10px]">{{ headerIcon.id }}</p>

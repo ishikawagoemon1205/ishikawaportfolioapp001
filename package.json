@@ -12,6 +12,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
     "firebase": "^10.12.3",
+    "gsap": "^3.12.5",
     "nuxt": "^3.11.2",
     "nuxt-mail": "^5.0.1",
     "nuxt-swiper": "^1.2.2",
