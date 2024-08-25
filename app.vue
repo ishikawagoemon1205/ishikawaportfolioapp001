@@ -1,28 +1,36 @@
 <script setup lang="ts">
-import type { TransitionProps } from 'vue';
 
+// -----------------------------------------------------------------------------------------
+// import
+// -----------------------------------------------------------------------------------------
 
-const {$gsap:gsap} = useNuxtApp();
+    import type { TransitionProps } from 'vue';
 
-let tl: gsap.core.Timeline = gsap.timeline() // gsap.core.Timelineはgsap特有のタイムラインオブジェクトのデータ型
-const   transition: TransitionProps = {
-    name: 'page',
-    mode: "out-in",
-    onEnter: (el, done) => {
-        tl.to('.js-mask',{left: '500vh'})
-        done()
-    },
-    onBeforeLeave: (el) => {
-        tl.set('.js-mask',{left: '-200vh'})
-    },
-    onLeave: (el, done) => {
-        tl.to('.js-mask',{
-            left: 0,
-            duration: 0.3,
-        })
-        done()
-    },
-}
+// -----------------------------------------------------------------------------------------
+// 画面遷移後のページアニメーション
+// -----------------------------------------------------------------------------------------
+
+    const {$gsap:gsap} = useNuxtApp();
+
+    let tl: gsap.core.Timeline = gsap.timeline() // gsap.core.Timelineはgsap特有のタイムラインオブジェクトのデータ型
+    const   transition: TransitionProps = {
+        name: 'page',
+        mode: "out-in",
+        onEnter: (el, done) => {
+            tl.to('.js-mask',{left: '500vh'})
+            done()
+        },
+        onBeforeLeave: (el) => {
+            tl.set('.js-mask',{left: '-300vh'})
+        },
+        onLeave: (el, done) => {
+            tl.to('.js-mask',{
+                left: 0,
+                duration: 0.3,
+            })
+            done()
+        },
+    }
 
 </script>
 
@@ -39,8 +47,8 @@ $transition-mask-color: rgb(0, 59, 220);
   position: fixed;
   top: 0;
   left: -200vw;
-  width: 100vw;
-  height: 100vh;
+  width: 150vw;
+  height: 150vh;
   z-index: 9999;
   background: $transition-mask-color;
   &:before,

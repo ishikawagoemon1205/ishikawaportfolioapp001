@@ -4,7 +4,7 @@
 // import
 // -----------------------------------------------------------------------------------------
 
-import type {userDate} from '@/interfaces'
+// import type {userDate} from '@/interfaces'
 
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/firestore';
@@ -91,8 +91,9 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 
     // ポートフォリオのコンテンツの値を保持するRef
     const portfoliocontents:Ref<Portfolio[]> = ref([ 
-        {name: "下北沢自動車学校", period: "2024/05" , backgroundImg: "portfolio001.png" , skill1: "htmlIcon.png" , skill2: "cssIcon.png" , skill3: "wordpressIcon.png" , link: "https://www.shimokitazawa-ds.com/" },
-        {name: "ギャラリー国立", period: "2024/05" , backgroundImg: "portfolio002.png" , skill1: "htmlIcon.png" , skill2: "cssIcon.png" , skill3: "wix.png" , link: "" },
+        {name: "ギャラリー国立", period: "2022/01" , backgroundImg: "portfolio002.png" , skill1: "htmlIcon.png" , skill2: "cssIcon.png" , skill3: "wix.png" , link: "https://www.gallery-kunitachi.com/" },
+        {name: "下北沢自動車学校", period: "2024/03" , backgroundImg: "portfolio001.png" , skill1: "htmlIcon.png" , skill2: "cssIcon.png" , skill3: "wordpressIcon.png" , link: "https://www.shimokitazawa-ds.com/" },
+        {name: "廃棄物運搬支援アプリ", period: "2024/8" , backgroundImg: "comingsonn.png" , skill1: "whitebg.png" , skill2: "whitebg.png" , skill3: "whitebg.png" , link: "" },
     ])
 
     // 問い合わせフォームの入力値を保持するRef
@@ -180,6 +181,18 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
             }
 
             
+// -----------------------------------------------------------------------------------------
+// useState
+// -----------------------------------------------------------------------------------------
+
+    const EnabledModalStyle = useState<{property: boolean}>(
+        'currentModalStyle', 
+        () => {
+            return {
+                property:<boolean> false,
+            }
+    });
+
 
 // -----------------------------------------------------------------------------------------
 // 関数

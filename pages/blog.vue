@@ -1,6 +1,10 @@
 <script setup lang="ts">
 
 // -----------------------------------------------------------------------------------------
+// interface
+// -----------------------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------------------
 // ref
 // -----------------------------------------------------------------------------------------
 
@@ -16,15 +20,24 @@
     })
 
 // -----------------------------------------------------------------------------------------
+// useState
+// -----------------------------------------------------------------------------------------
+
+    const EnabledModalStyle = useState<{property: boolean}>(
+        'currentModalStyle', 
+        () => {
+            return {
+                property:<boolean> false,
+            }
+    });
+
+// -----------------------------------------------------------------------------------------
 // 関数
 // -----------------------------------------------------------------------------------------
 
-    const allClearSkillButtonColor = () => {
-
-        for(let key in skillButtonColor.value){
-            // skillButtonColor.value[key] = "#ffffff"
-        }
-
+    const changeModalStyleEnabled = () => {
+        EnabledModalStyle.value.property = true;
+        console.log(EnabledModalStyle.value.property);
     }
 
 // -----------------------------------------------------------------------------------------
@@ -32,8 +45,6 @@
 // -----------------------------------------------------------------------------------------
 
     const clickButton = (property:string) => {
-
-        allClearSkillButtonColor();
 
         if(property === "html"){
             skillButtonColor.value.html = "#00E0FF";
@@ -58,7 +69,6 @@
 
 <template>
     <div class="w-[100%] h-[100%] bg-BGwhite relative z-[1]">
-        <!-- <div class="absolute w-[100%] h-[calc(100%-140px)] top-[90px]"> -->
         <div class="absolute w-[100%] h-auto top-[90px]">
             <!-- ページ構成 -->
             <!-- PC表示 -->
@@ -82,7 +92,7 @@
                         <ButtonsAws  @click="clickButton('aws')" :style="{background: skillButtonColor.aws}"></ButtonsAws>
                     </div>
                     <div class="w-[250px] h-[10%] mt-[calc(55vh)] fixed">
-                        <button class=" w-[200px] h-[60px] rounded-[5px] bg-blue hover:bg-Lblue transition duration-300">
+                        <button @click="changeModalStyleEnabled" class=" w-[200px] h-[60px] rounded-[5px] bg-blue hover:bg-Lblue transition duration-300">
                             <div class="flex items-center justify-center space-x-[8px]">
                                 <PlusOutlined :style="{color: '#ffffff'}" />
                                 <h4 class="text-[#ffffff]">Add</h4>
