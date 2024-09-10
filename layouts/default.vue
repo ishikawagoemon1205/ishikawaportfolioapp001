@@ -45,7 +45,7 @@
             <Footer class="bottom-0 z-[100] px-[4%]"></Footer>
         </div>
         <!-- モーダル -->
-        <div v-if="useStateModalStyle.property" class="absolute w-[100%] h-[100%] z-[200]">
+        <div v-if="useStateModalStyle" class="absolute w-[100%] h-[100%] z-[200]">
             <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
                 <ModalsCreatnotemodal></ModalsCreatnotemodal>
             </div>
