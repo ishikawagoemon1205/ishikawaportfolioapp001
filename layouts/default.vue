@@ -14,6 +14,8 @@
 
     const useStateModalStyle = useState<{property: boolean}>('currentModalStyle');
 
+    const useStateNoteStyle = useState<{property: boolean}>('currentNoteStyle');
+
 // -----------------------------------------------------------------------------------------
 // computed
 // -----------------------------------------------------------------------------------------
@@ -21,7 +23,12 @@
     const modalStyle = computed(
         ():boolean => {
         return useStateModalStyle.value.property
-    })
+    });
+
+    const noteStyle = computed(
+        ():boolean => {
+        return useStateNoteStyle.value.property
+    });
 
 // -----------------------------------------------------------------------------------------
 // 関数
@@ -41,6 +48,12 @@
         <div v-if="modalStyle" class="absolute w-[100%] h-[100%] z-[200]">
             <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
                 <ModalsCreatnotemodal></ModalsCreatnotemodal>
+            </div>
+        </div>
+        <!-- ノート表示 -->
+        <div v-if="noteStyle" class="absolute w-[100%] h-[100%] z-[200]">
+            <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
+                <ModalsDetailnote></ModalsDetailnote>
             </div>
         </div>
     </div>

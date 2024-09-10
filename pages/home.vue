@@ -159,26 +159,26 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 
         // クエリ処理
 
-            // firebaseのユーザーデータ取得し、
-            const firebaseGetUserDate  = async () => {
-                // portfolio001をクエリする
-                let q = query(
-                    collection(db,'portfolio001')
-                )
-                // クエリからドキュメントを取得
-                let querySnapshot1 = await getDocs(q);
-                // ドキュメントをref指定しているuserListに格納する
-                querySnapshot1.forEach((doc) => {
-                    userList.value.push({
-                        id: doc.id,
-                        name: doc.data().name,
-                        emailAddress: doc.data().emailAddress,
-                        inquire: doc.data().inquire,
-                    })
-                })
-                console.log(userList)
-                console.log(userList.value[0].name)
-            }
+            // // firebaseのユーザーデータ取得し、
+            // const firebaseGetUserDate  = async () => {
+            //     // portfolio001をクエリする
+            //     let q = query(
+            //         collection(db,'portfolio001')
+            //     )
+            //     // クエリからドキュメントを取得
+            //     let querySnapshot1 = await getDocs(q);
+            //     // ドキュメントをref指定しているuserListに格納する
+            //     querySnapshot1.forEach((doc) => {
+            //         userList.value.push({
+            //             id: doc.id,
+            //             name: doc.data().name,
+            //             emailAddress: doc.data().emailAddress,
+            //             inquire: doc.data().inquire,
+            //         })
+            //     })
+            //     console.log(userList)
+            //     console.log(userList.value[0].name)
+            // }
 
             
 // -----------------------------------------------------------------------------------------
@@ -488,7 +488,7 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                                 </div>
                                 <div class="w-[60%] h-[100%] flex items-center justify-center">
                                     <div class="w-[100%] h-[150px] pr-[15%] flex items-center">
-                                        <p class="overflow-wrap text-[20px]">バリュープロポジションの解像度を高め、最適なUXの提案と、設計からPMFまでを総合的にサポートします。</p>
+                                        <p class="overflow-wrap text-[20px]">デザインソフトを使用したUIUXのデザインから詳細設計、開発を一貫してサポートさせていただきます。</p>
                                     </div>
                                 </div>
                             </div>
