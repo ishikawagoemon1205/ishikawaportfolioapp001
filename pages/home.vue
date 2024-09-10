@@ -249,22 +249,22 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 // DOMライフサイクルフック
 // -----------------------------------------------------------------------------------------
 
-    onMounted(async () => {
+    // onMounted(async () => {
         
-        // ユーザー情報を取得
-        // firebaseGetUserDate()
+    //     // ユーザー情報を取得
+    //     // firebaseGetUserDate()
 
-    });
+    // });
 
 // -----------------------------------------------------------------------------------------
 // テンプレート内で起動する関数
 // -----------------------------------------------------------------------------------------
 
     // Skillボタンをクリックしたい際に、スキル概要が切り替わる関数
-    const onClickSkillButton = (property:string) => {
+    const onClickSkillButton = (Property:string) => {
 
         // クリックしたスキルボタンの名称
-        let onClickedSkillName = property;
+        let onClickedSkillName = Property;
         
         // スキル情報の詳細を持つRefに対してループ処理する
         for(let i = 0 ; i < skillItems.value.length ; i++){
@@ -399,25 +399,25 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
         finishInquiry.value = true;
     }
 
-    const clickButton = (property:string) => {
+    const clickButton = (Property:string) => {
 
         allClearSkillButtonColor();
 
-        if(property === "html"){
+        if(Property === "html"){
             skillButtonColor.value.html = "#00E0FF";
-        }else if(property === "css"){
+        }else if(Property === "css"){
             skillButtonColor.value.css = "#00E0FF";
-        }else if(property === "javascript"){
+        }else if(Property === "javascript"){
             skillButtonColor.value.javascript = "#00E0FF";
-        }else if(property === "typescript"){
+        }else if(Property === "typescript"){
             skillButtonColor.value.typescript = "#00E0FF";
-        }else if(property === "vue"){
+        }else if(Property === "vue"){
             skillButtonColor.value.vue = "#00E0FF";
-        }else if(property === "nuxt"){
+        }else if(Property === "nuxt"){
             skillButtonColor.value.nuxt = "#00E0FF";
-        }else if(property === "python"){
+        }else if(Property === "python"){
             skillButtonColor.value.pythone = "#00E0FF";
-        }else if(property === "aws"){
+        }else if(Property === "aws"){
             skillButtonColor.value.aws = "#00E0FF";
         }
     }
@@ -477,7 +477,7 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
                                 </div>
                                 <div class="w-[60%] h-[100%] flex items-center justify-center">
                                     <div class="w-[100%] h-[150px] pr-[15%] flex items-center">
-                                        <p class="overflow-wrap text-[20px]">デザインソフトを使用したUIUXのデザインから詳細設計、開発を一貫してサポートさせていただきます。</p>
+                                        <p class="overflow-wrap text-[20px]">UIUXのモックアップ作成から詳細設計、開発を一貫してサポートさせていただきます。</p>
                                     </div>
                                 </div>
                             </div>
