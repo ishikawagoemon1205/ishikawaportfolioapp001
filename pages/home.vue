@@ -217,25 +217,25 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
     }
 
     // 問い合わせ内容をfirebaseのdbに保存する関数
-    // const saveInquiryToFirebase = async () => {
+    const saveInquiryToFirebase = async () => {
 
-    //     console.log("データ保存をトライ")
+        console.log("データ保存をトライ")
 
-    //     try {
-    //         let name = setCurrentUserData.value.name;
-    //         let emailAddress = setCurrentUserData.value.name;
-    //         let inquiry = setCurrentUserData.value.name;
-    //         let docRef = await addDoc(collection(db, 'portfolio001'),{
-    //             name: name,
-    //             emailAddress: emailAddress,
-    //             inquiry: inquiry,
-    //             createdAt: new Date()
-    //         })
-    //     } catch (e) {
-    //         console.error('Error adding document: ', e);
-    //     }
+        try {
+            let name = setCurrentUserData.value.name;
+            let emailAddress = setCurrentUserData.value.name;
+            let inquiry = setCurrentUserData.value.name;
+            let docRef = await addDoc(collection(db, 'portfolio001'),{
+                name: name,
+                emailAddress: emailAddress,
+                inquiry: inquiry,   
+                createdAt: new Date()
+            })
+        } catch (e) {
+            console.error('Error adding document: ', e);
+        }
 
-    // }
+    }
 
     const allClearSkillButtonColor = () => {
 
