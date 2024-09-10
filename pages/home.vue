@@ -132,7 +132,7 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
     // ユーザーデータを格納するRef
     const userList:any = ref([])
 
-    const skillButtonColor = ref({
+    const skillButtonColor:any = ref({
         html: "#ffffff",
         css: "#ffffff",
         javascript: "#ffffff",
@@ -239,10 +239,11 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 
     const allClearSkillButtonColor = () => {
 
-        for(let key in skillButtonColor.value){
+        Object.keys(skillButtonColor.value).forEach(key => {
             skillButtonColor.value[key] = "#ffffff"
-        }
-    }
+        });
+
+    };
 
 
 // -----------------------------------------------------------------------------------------
@@ -261,10 +262,10 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 // -----------------------------------------------------------------------------------------
 
     // Skillボタンをクリックしたい際に、スキル概要が切り替わる関数
-    const onClickSkillButton = (Property:string) => {
+    const onClickSkillButton = (property:string) => {
 
         // クリックしたスキルボタンの名称
-        let onClickedSkillName = Property;
+        let onClickedSkillName = property;
         
         // スキル情報の詳細を持つRefに対してループ処理する
         for(let i = 0 ; i < skillItems.value.length ; i++){
@@ -399,25 +400,25 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
         finishInquiry.value = true;
     }
 
-    const clickButton = (Property:string) => {
+    const clickButton = (property:string) => {
 
         allClearSkillButtonColor();
 
-        if(Property === "html"){
+        if(property === "html"){
             skillButtonColor.value.html = "#00E0FF";
-        }else if(Property === "css"){
+        }else if(property === "css"){
             skillButtonColor.value.css = "#00E0FF";
-        }else if(Property === "javascript"){
+        }else if(property === "javascript"){
             skillButtonColor.value.javascript = "#00E0FF";
-        }else if(Property === "typescript"){
+        }else if(property === "typescript"){
             skillButtonColor.value.typescript = "#00E0FF";
-        }else if(Property === "vue"){
+        }else if(property === "vue"){
             skillButtonColor.value.vue = "#00E0FF";
-        }else if(Property === "nuxt"){
+        }else if(property === "nuxt"){
             skillButtonColor.value.nuxt = "#00E0FF";
-        }else if(Property === "python"){
+        }else if(property === "python"){
             skillButtonColor.value.pythone = "#00E0FF";
-        }else if(Property === "aws"){
+        }else if(property === "aws"){
             skillButtonColor.value.aws = "#00E0FF";
         }
     }
