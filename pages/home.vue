@@ -185,15 +185,6 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 // useState
 // -----------------------------------------------------------------------------------------
 
-    const EnabledModalStyle = useState<{property: boolean}>(
-        'currentModalStyle', 
-        () => {
-            return {
-                property:<boolean> false,
-            }
-    });
-
-
 // -----------------------------------------------------------------------------------------
 // 関数
 // -----------------------------------------------------------------------------------------
@@ -271,8 +262,6 @@ import { getFirestore, collection, getDocs, query, addDoc } from 'firebase/fires
 
     // Skillボタンをクリックしたい際に、スキル概要が切り替わる関数
     const onClickSkillButton = (property:string) => {
-
-        console.log(`クリック名称:${property}`)
 
         // クリックしたスキルボタンの名称
         let onClickedSkillName = property;
