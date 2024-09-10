@@ -1,3 +1,0 @@
-<template>
-    jhitjhiotyjoihjtyoiphjtopyjhopityjhiopytj
-</template>

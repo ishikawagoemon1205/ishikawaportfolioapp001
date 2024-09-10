@@ -45,17 +45,17 @@
             <Footer class="bottom-0 z-[100] px-[4%]"></Footer>
         </div>
         <!-- モーダル -->
-        <div v-if="modalStyle" class="absolute w-[100%] h-[100%] z-[200]">
+        <!-- <div v-if="modalStyle" class="absolute w-[100%] h-[100%] z-[200]">
             <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
                 <ModalsCreatnotemodal></ModalsCreatnotemodal>
             </div>
-        </div>
+        </div> -->
         <!-- ノート表示 -->
-        <div v-if="noteStyle" class="absolute w-[100%] h-[100%] z-[200]">
+        <!-- <div v-if="noteStyle" class="absolute w-[100%] h-[100%] z-[200]">
             <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
                 <ModalsDetailnote></ModalsDetailnote>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
