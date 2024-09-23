@@ -83,7 +83,7 @@
 // -----------------------------------------------------------------------------------------
 
     const changeDisabledModalStyle = () => {
-        useStateModalStyle.value.property = false;
+        useStateModalStyle.value = false;
     };
 
     const modalValidationChecker = () => {
@@ -162,7 +162,7 @@
         let sendContentDate = contentsDate.value.content;
         console.log(sendContentDate)
 
-        const convertToObjects = (contentWrapper) => {
+        const convertToObjects = (contentWrapper:any) => {
             return contentWrapper.map((item, index) => {
                 let obj = {};
                 item.forEach((value, i) => {

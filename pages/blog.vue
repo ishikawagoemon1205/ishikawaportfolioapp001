@@ -180,19 +180,19 @@
     }
 
     const changeModalStyleEnabled = () => {
-        EnabledModalStyle.value.property = true;
+        EnabledModalStyle.value = true;
     }
 
     const changeNoteStyleEnabled = (item:any) => {
         EnabledNoteStyle.value.property = true;
+        console.log(EnabledNoteStyle.value);
+        console.log(EnabledNoteStyle.value.property);
         EnabledNoteStyle.value.selectNoteId = item.id;
-        console.log(item.id)
         EnabledNoteStyle.value.selectNoteTitle = item.title;
         EnabledNoteStyle.value.selectNoteTimeNanoseconds = item.time.nanoseconds;
         EnabledNoteStyle.value.selectNoteTimeSeconds = item.time.seconds;
         EnabledNoteStyle.value.selectNoteProgramtype = item.programType;
         EnabledNoteStyle.value.selectNoteContent = item.content;
-        console.log(EnabledNoteStyle.value);
     }
 
 // -----------------------------------------------------------------------------------------
@@ -253,10 +253,12 @@
                     </div>
                     <div class="w-[250px] h-[10%] mt-[calc(55vh)] fixed">
                         <button @click="changeModalStyleEnabled" class=" w-[200px] h-[60px] rounded-[5px] bg-blue hover:bg-Lblue transition duration-300">
-                            <div class="flex items-center justify-center space-x-[8px]">
-                                <PlusOutlined :style="{color: '#ffffff'}" />
-                                <h4 class="text-[#ffffff]">Add</h4>
-                            </div>
+                            <a-tooltip title="誰でもご自由に追加してください" color="blue">
+                                <div class="flex items-center justify-center space-x-[8px]">
+                                    <PlusOutlined :style="{color: '#ffffff'}" />
+                                    <h4 class="text-[#ffffff]">Add</h4>
+                                </div>
+                            </a-tooltip>
                         </button>
                     </div>
                 </div>
