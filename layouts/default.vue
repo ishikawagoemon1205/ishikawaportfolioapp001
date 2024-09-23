@@ -27,7 +27,7 @@
 
     const noteStyle = computed(
         ():boolean => {
-        return useStateNoteStyle.value
+        return useStateNoteStyle.value.property
     });
 
 
@@ -63,11 +63,11 @@
             </div>
         </div>
         <!-- ノート表示 -->
-        <!-- <div v-if="useStateNoteStyle.property" class="absolute w-[100%] h-[100%] z-[200]">
+        <div v-if="useStateNoteStyle.property" class="absolute w-[100%] h-[100%] z-[200]">
             <div class="w-[100%] h-[100%] fixed bg-Dgray bg-opacity-50">
                 <ModalsDetailnote></ModalsDetailnote>
             </div>
-        </div> -->
+        </div>
     </div>
 </template>
 
